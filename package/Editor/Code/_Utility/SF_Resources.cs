@@ -54,6 +54,16 @@ namespace ShaderForge{
 
 		private static bool SearchForInternalResourcesPath( out string path ){
 			path = "";
+
+			// UPM package install: locate the package this assembly was compiled into
+			// and use its assetPath (e.g. "Packages/com.kuantumania.shaderforge").
+			var pkg = UnityEditor.PackageManager.PackageInfo.FindForAssembly( typeof(SF_Resources).Assembly );
+			if( pkg != null ){
+				path = pkg.assetPath + "/Editor/InternalResources/";
+				return true;
+			}
+
+			// Legacy install under Assets/: scan for the well-known folder name.
 			string partialPath = "/ShaderForge/Editor/InternalResources/";
 			string foundPath = null;
 			foreach(string s in AssetDatabase.GetAllAssetPaths()){
