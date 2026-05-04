@@ -1871,7 +1871,9 @@ namespace ShaderForge {
 			}
 
 			string presetPath = GetShaderPresetPath( preset );
-			StreamReader presetReader = new StreamReader( Application.dataPath + presetPath.Substring( 6 ) );
+			// presetPath is project-relative (e.g. "Assets/..." or "Packages/..."),
+			// and Unity's working directory is the project root, so we can read it directly.
+			StreamReader presetReader = new StreamReader( presetPath );
 
 			// So we now have the path to save it, let's save
 			StreamWriter sw;
