@@ -42,6 +42,7 @@ The original Shader Forge was built for Unity 5/2019. The following breaking cha
 - `#pragma fragmentoption ARB_precision_hint_fastest` removed (causes errors in Unity 6)
 - `SHOULD_SAMPLE_SH` macro updated to use `!defined(LIGHTMAP_ON)` instead of `defined(LIGHTMAP_OFF)`
 - `#ifdef LIGHTMAP_OFF` → `#ifndef LIGHTMAP_ON`
+- `_Object2World` → `unity_ObjectToWorld` in the World Position node (the legacy `_Object2World` matrix was removed back in Unity 5.4 and does not exist in Unity 6)
 
 All existing `.shader` files (example shaders and preset shaders) were updated with the same fixes.
 

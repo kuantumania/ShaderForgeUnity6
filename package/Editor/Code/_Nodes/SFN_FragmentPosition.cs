@@ -35,9 +35,9 @@ namespace ShaderForge {
 			if( SF_Evaluator.inFrag )
 				return "i.posWorld";
 			else if( SF_Evaluator.inVert )
-				return "mul(_Object2World, v.vertex)";
+				return "mul(unity_ObjectToWorld, v.vertex)";
 			else if( SF_Evaluator.inTess )
-				return "mul(_Object2World, v.vertex)";
+				return "mul(unity_ObjectToWorld, v.vertex)";
 			else{
 				Debug.Log( "Evaluated into unknown shader program" );
 				return null;
