@@ -1,0 +1,30 @@
+{
+  "name": "com.kuantumania.shaderforge",
+  "version": "1.0.0",
+  "displayName": "Shader Forge",
+  "description": "A visual, node-based shader editor for Unity (Built-in Render Pipeline). Unity 6 compatible fork of Freya Holmér's Shader Forge.",
+  "unity": "6000.0",
+  "type": "tool",
+  "keywords": [
+    "shader",
+    "visual",
+    "node",
+    "editor",
+    "forge"
+  ],
+  "author": {
+    "name": "Freya Holmér",
+    "url": "https://github.com/FreyaHolmer/ShaderForge"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kuantumania/ShaderForgeUnity6.git"
+  },
+  "samples": [
+    {
+      "displayName": "Example Assets",
+      "description": "Example shaders, scenes and meshes demonstrating Shader Forge features.",
+      "path": "Samples~/Example Assets"
+    }
+  ]
+}
